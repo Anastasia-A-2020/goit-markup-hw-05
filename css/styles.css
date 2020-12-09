@@ -671,4 +671,43 @@ header .logo {
     letter-spacing: 0.03em;
     color: var(--color-description);
 }
+
+.projects-list-menu-desc {
+    position: relative;
+}
+
+.projects-list-description {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding-top: 63px;
+    padding-right: 24px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.556;
+    letter-spacing: 0.03em;
+    color: var(--color-lead);
+
+    background-color:rgba(33, 150, 243, 0.9);
+}
+
+.is-hidden-desc {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.projects-list-item:hover .is-hidden-desc {
+    opacity: 1;
+    pointer-events: none;
+}
 /*================== END PROJECTS ==================*/

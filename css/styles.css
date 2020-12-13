@@ -6,6 +6,8 @@
     --main-font: 'Roboto', sans-serif;
     --secondary-font: 'Raleway', sans-serif;
     --projects-list-gap: 30px;
+    --duration: 250ms;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -64,6 +66,8 @@ img {
 .footer__tel:hover,
 .footer__tel:focus {
     color: var(--accent-color);
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .address__mail:hover .address__mail-icon,
@@ -71,6 +75,8 @@ img {
 .address__tel:focus .address__tel-icon,
 .address__tel:focus .address__tel-icon {
     fill: var(--accent-color);
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .address__mail-icon {
@@ -172,11 +178,11 @@ header .logo {
     margin-right: 50px;
 }
 
-.active {
+.current {
     position: relative;
 }
 
-.active::after {
+.current::after {
     content:"";
     display: inline-block;
     background-color:var(--accent-color);
@@ -187,8 +193,7 @@ header .logo {
     width: 100%;
     height: 4px;
 
-    border-radius: 2px;
-    
+    border-radius: 2px;  
 }
 
 /*=============== END HEADER ===============*/
@@ -241,6 +246,8 @@ header .logo {
     background-color: var(--accent-color);
     cursor: pointer;
     color: var(--color-lead);
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .overlay {
@@ -474,6 +481,8 @@ header .logo {
 .footer__contacts-link:hover,
 .footer__contacts-link:focus {
     background-color: var(--accent-color);
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .social-list_link:hover .social-link-icon,
@@ -507,6 +516,8 @@ header .logo {
 .client-list-link:focus {
     color: var(--accent-color);
     border: 1px solid var(--accent-color);
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .client-list-link-icon {
@@ -516,6 +527,8 @@ header .logo {
 .client-list-link:hover .client-list-link-icon,
 .client-list-link:focus .client-list-link-icon {
     fill: var(--accent-color);
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 /*=============== END CLIENTS ===============*/
@@ -639,6 +652,8 @@ header .logo {
         0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
     cursor: pointer;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .project__buttons-list-item:not(:last-child) {
@@ -711,7 +726,6 @@ header .logo {
     line-height: 1.556;
     letter-spacing: 0.03em;
     color: var(--color-lead);
-
     background-color:rgba(33, 150, 243, 0.9);
 }
 
@@ -720,7 +734,7 @@ header .logo {
 .projects-list-item-link:hover .is-hidden-desc,
 .projects-list-item-link:focus .is-hidden-desc  {
     transform: translateY(0%);
-    transition-duration:250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 /*================== END PROJECTS ==================*/

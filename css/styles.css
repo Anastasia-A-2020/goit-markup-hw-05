@@ -83,6 +83,10 @@ img {
     margin-right: 10px;
 }
 
+.address__tel-icon {
+    margin-right: 10px;
+}
+
 .nav__list-item,
 .address__mail,
 .address__tel {

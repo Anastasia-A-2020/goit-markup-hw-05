@@ -572,6 +572,9 @@ header .logo {
     letter-spacing: 0.03em;
     text-decoration: none;
     color: var(--color-description);
+
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .footer__slogan {

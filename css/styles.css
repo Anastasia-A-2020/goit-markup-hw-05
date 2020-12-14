@@ -49,10 +49,6 @@ img {
     min-width: 100%;
 }
 
-.nav__list-item-link:visited {
-    color:var(--color-title);
-}
-
 .nav__list-item:hover,
 .nav__list-item:focus,
 .address__tel:hover,
@@ -66,8 +62,6 @@ img {
 .footer__tel:hover,
 .footer__tel:focus {
     color: var(--accent-color);
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
 }
 
 .address__mail:hover .address__mail-icon,
@@ -75,16 +69,22 @@ img {
 .address__tel:focus .address__tel-icon,
 .address__tel:focus .address__tel-icon {
     fill: var(--accent-color);
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
 }
 
 .address__mail-icon {
     margin-right: 10px;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .address__tel-icon {
     margin-right: 10px;
+}
+
+.address__mail,
+.address__tel {
+    display: flex;
+    align-items:center;
 }
 
 .nav__list-item,
@@ -97,14 +97,15 @@ img {
     letter-spacing: 0.02em;
     text-decoration: none;
     color: var(--color-description);
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 /*=============== END COMPONENTS ===============*/
 
 /*=============== HEADER ===============*/
 .header {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    border-bottom: 1px solid #ECECEC;
 }
 .header .conteiner,
 .footer .conteiner {
@@ -173,9 +174,13 @@ header .logo {
 }
 
 .nav__list-item-link {
+    display: inline-block;
     text-decoration: none;
-    padding-top: 36px;
-    padding-bottom: 36px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--color-title);
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .nav__list-item:not(:last-child) {
@@ -184,6 +189,7 @@ header .logo {
 
 .current {
     position: relative;
+    color: var(--accent-color);
 }
 
 .current::after {
@@ -191,7 +197,7 @@ header .logo {
     display: inline-block;
     background-color:var(--accent-color);
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     right: 0;
     
     width: 100%;
@@ -250,8 +256,8 @@ header .logo {
     background-color: var(--accent-color);
     cursor: pointer;
     color: var(--color-lead);
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
+    /*transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);*/
 }
 
 .overlay {
@@ -478,6 +484,9 @@ header .logo {
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .social-list_link:hover,
@@ -485,8 +494,6 @@ header .logo {
 .footer__contacts-link:hover,
 .footer__contacts-link:focus {
     background-color: var(--accent-color);
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
 }
 
 .social-list_link:hover .social-link-icon,
@@ -496,7 +503,6 @@ header .logo {
 
 .social-list_link {
     fill: #AFB1B8;
-    ;
 }
 /*=============== END TEAM ===============*/
 
@@ -514,6 +520,9 @@ header .logo {
     border-radius: 4px;
     width: 170px;
     height: 90px;
+
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .client-list-link:hover,
@@ -524,13 +533,14 @@ header .logo {
 
 .client-list-link-icon {
     fill: #AFB1B8;
+    
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
 }
 
 .client-list-link:hover .client-list-link-icon,
 .client-list-link:focus .client-list-link-icon {
     fill: var(--accent-color);
-    transition-duration: var(--duration);
-    transition-timing-function: var(--timing-function);
 }
 
 /*=============== END CLIENTS ===============*/
@@ -619,7 +629,6 @@ header .logo {
 .projects {
     padding-top: 88px;
     padding-bottom: 100px;
-    border: 1px solid #ECECEC;
 }
 
 .projects__buttons-list {
@@ -672,6 +681,8 @@ header .logo {
     border: none;
     padding: 6px 22px;
     font-family: var(--main-font);
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
     }
 
 .projects-list-text {
@@ -730,11 +741,9 @@ header .logo {
     background-color:rgba(33, 150, 243, 0.9);
 }
 
-
-
 .projects-list-item-link:hover .is-hidden-desc,
 .projects-list-item-link:focus .is-hidden-desc  {
     transform: translateY(0%);
-    transition: transform var(--duration) var(--timing-function);
 }
+
 /*================== END PROJECTS ==================*/
